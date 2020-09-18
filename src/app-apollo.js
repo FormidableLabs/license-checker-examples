@@ -3,10 +3,12 @@
  */
 
 import { ApolloClient, InMemoryCache } from "@apollo/client";
-import react from "react";
+import React from "react";
+import ReactDOM from "react-dom";
 
 console.log({
-  react,
+  React,
+  ReactDOM,
   ApolloClient,
   InMemoryCache
 });

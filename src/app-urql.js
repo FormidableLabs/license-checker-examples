@@ -3,10 +3,12 @@
  */
 
 import { createClient, Provider } from "urql";
-import react from "react";
+import React from "react";
+import ReactDOM from "react-dom";
 
 console.log({
-  react,
+  React,
+  ReactDOM,
   createClient,
   Provider
 });

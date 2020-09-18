@@ -28,6 +28,13 @@ $ yarn build-unapproved
 
 `TODO: Insert license configuration and links to real licenses.`
 
+Here is our current license list from: https://spdx.org/licenses/
+
+- `MIT`: https://spdx.org/licenses/MIT.html
+- `0BSD`: https://spdx.org/licenses/0BSD.html
+- TODO: OTHER BASE CONFIG LICENSES
+- TODO: OTHER PERMISSIV LICENSES
+
 ## Outputs
 
 Outputs are of the form:

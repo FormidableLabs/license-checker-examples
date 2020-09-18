@@ -39,7 +39,12 @@ module.exports = APPS.map((app) => ({
         // Display complete license list to console.
         const used = {};
         data.dependencies.forEach(({ licenseName }) => {
-          used[licenseName] = (used[licenseName] || 0) + 1
+          used[licenseName] = used[licenseName] || {
+            count: 0,
+            url: `https://spdx.org/licenses/${licenseName}.html`
+          };
+
+          used[licenseName].count++;
         });
         console.log(`Licenses: ${app}\n${JSON.stringify(used, null, 2)}\n`);
 
