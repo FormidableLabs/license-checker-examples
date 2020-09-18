@@ -2,4 +2,11 @@
  * Apollo-based app.
  */
 
-console.log("TODO");
+import { ApolloClient, InMemoryCache } from "@apollo/client";
+import react from "react";
+
+console.log({
+  react,
+  ApolloClient,
+  InMemoryCache
+});
