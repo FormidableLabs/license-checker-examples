@@ -2,4 +2,11 @@
  * URQL-based app.
  */
 
-console.log("TODO");
+import { createClient, Provider } from "urql";
+import react from "react";
+
+console.log({
+  react,
+  createClient,
+  Provider
+});

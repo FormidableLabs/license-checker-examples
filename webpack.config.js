@@ -41,7 +41,7 @@ module.exports = APPS.map((app) => ({
         data.dependencies.forEach(({ licenseName }) => {
           used[licenseName] = (used[licenseName] || 0) + 1
         });
-        console.log(`License Summary: \n${JSON.stringify(used, null, 2)}`);
+        console.log(`Licenses: ${app}\n${JSON.stringify(used, null, 2)}\n`);
 
         // Format output.
         return JSON.stringify(data, null, 2)
