@@ -1,0 +1,13 @@
+{
+  "name": "license-checker-examples",
+  "version": "0.0.1",
+  "description": "Build examples with license checking.",
+  "main": "index.js",
+  "author": "Ryan Roemer <ryan.roemer@formidable.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "license-checker-webpack-plugin": "^0.1.5",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12"
+  }
+}
