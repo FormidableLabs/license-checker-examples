@@ -35,7 +35,17 @@ module.exports = APPS.map((app) => ({
     }),
     new LicenseCheckerWebpackPlugin({
       outputFilename: `app-${app}-notices.json`,
-      outputWriter: (data) => JSON.stringify(data, null, 2)
+      outputWriter: (data) => {
+        // Display complete license list to console.
+        const used = {};
+        data.dependencies.forEach(({ licenseName }) => {
+          used[licenseName] = (used[licenseName] || 0) + 1
+        });
+        console.log(`License Summary: \n${JSON.stringify(used, null, 2)}`);
+
+        // Format output.
+        return JSON.stringify(data, null, 2)
+      }
     })
   ]
 }));
