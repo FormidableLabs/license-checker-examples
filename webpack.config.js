@@ -28,11 +28,14 @@ module.exports = APPS.map((app) => ({
   devtool: false,
   plugins: [
     new LicenseCheckerWebpackPlugin({
-      outputFilename: `app-${app}-notices.txt` // TODO: Switch to JSON?
+      outputFilename: `app-${app}-notices.txt`
 
+      // TODO: Common license config.
       // TODO: consider emitError: true
-
-      // TODO: Output the SPDX of everything use `outputWriter` and dump JSON
+    }),
+    new LicenseCheckerWebpackPlugin({
+      outputFilename: `app-${app}-notices.json`,
+      outputWriter: (data) => JSON.stringify(data, null, 2)
     })
   ]
 }));

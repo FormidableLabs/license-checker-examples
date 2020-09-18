@@ -36,6 +36,7 @@ Outputs are of the form:
 dist/
   app-[NAME].js
   app-[NAME]-notices.txt
+  app-[NAME]-notices.json
 ```
 
-where `app-[NAME]-notices.txt` contains license information for all included dependencies for that particular app.
+where `app-[NAME]-notices.txt` contains license information for all included dependencies for that particular app in text form suitable for a notice document. `app-[NAME]-notices.json` is a JSON dump of all the license data for possible programmatic use elsewhere.
