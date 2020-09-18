@@ -5,6 +5,10 @@
   "main": "index.js",
   "author": "Ryan Roemer <ryan.roemer@formidable.com>",
   "license": "MIT",
+  "scripts":{
+    "clean": "rm -rf dist",
+    "build": "webpack"
+  },
   "devDependencies": {
     "license-checker-webpack-plugin": "^0.1.5",
     "webpack": "^4.44.2",

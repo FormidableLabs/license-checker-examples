@@ -25,7 +25,7 @@ Outputs are of the form:
 ```
 dist/
   app-[NAME].js
-  ThirdPartyNotices.txt
+  app-[NAME]-notices.txt
 ```
 
-where `ThirdPartyNotices.txt` contains license information for all included dependencies.
+where `app-[NAME]-notices.txt` contains license information for all included dependencies for that particular app.

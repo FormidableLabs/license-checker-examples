@@ -3,12 +3,18 @@
 const path = require("path");
 const LicenseCheckerWebpackPlugin = require("license-checker-webpack-plugin");
 
-module.exports = {
+const APPS = [
+  "apollo",
+  "urql",
+  "unapproved"
+];
+
+// Use array to simulate completely separate builds
+module.exports = APPS.map((app) => ({
   mode: "development",
   context: __dirname,
   entry: {
-    "app-apollo": "./src/app-apollo.js",
-    "app-urql": "./src/app-urql.js",
+    [`app-${app}`]: `./src/app-${app}.js`,
   },
   output: {
     path: path.join(__dirname, "dist"),
@@ -17,7 +23,7 @@ module.exports = {
   devtool: false,
   plugins: [
     new LicenseCheckerWebpackPlugin({
-      outputFilename: "ThirdPartyNotices.txt"
+      outputFilename: `app-${app}-notices.txt`
     })
   ]
-};
+}));
