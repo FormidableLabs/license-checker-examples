@@ -7,7 +7,9 @@
   "license": "MIT",
   "scripts":{
     "clean": "rm -rf dist",
-    "build": "webpack"
+    "build": "webpack",
+    "build-all": "APP_ALL=true yarn build",
+    "build-unapproved": "APP_UNAPPROVED=true yarn build"
   },
   "devDependencies": {
     "license-checker-webpack-plugin": "^0.1.5",

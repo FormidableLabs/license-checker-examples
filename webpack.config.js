@@ -3,11 +3,16 @@
 const path = require("path");
 const LicenseCheckerWebpackPlugin = require("license-checker-webpack-plugin");
 
-const APPS = [
+let APPS = [
   "apollo",
-  "urql",
-  "unapproved"
+  "urql"
 ];
+
+if (process.env.APP_ALL === "true") {
+  APPS.push("unapproved");
+} else if (process.env.APP_UNAPPROVED === "true") {
+  APPS = ["unapproved"];
+}
 
 // Use array to simulate completely separate builds
 module.exports = APPS.map((app) => ({
