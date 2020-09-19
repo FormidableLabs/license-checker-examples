@@ -1,7 +1,21 @@
 "use strict";
 
 const path = require("path");
+const chalk = require("chalk");
 const LicenseCheckerWebpackPlugin = require("license-checker-webpack-plugin");
+
+const LICENSES = [
+  "Apache-2.0",
+  "BSD-2-Clause",
+  "BSD-3-Clause",
+  "MIT"
+];
+const LICENSE_OPTS = `(${LICENSES.join(" OR ")}`;
+console.log(chalk`
+{cyan ## Configured Licenses:}
+${LICENSES.map((lic) =>
+  chalk`- ${lic}: {gray https://spdx.org/licenses/${lic}.html}`).join("\n")}
+`);
 
 let APPS = [
   "apollo",
@@ -46,7 +60,7 @@ module.exports = APPS.map((app) => ({
 
           used[licenseName].count++;
         });
-        console.log(`Licenses: ${app}\n${JSON.stringify(used, null, 2)}\n`);
+        console.log(chalk`{cyan ## Licenses}: {green ${app}}\n${JSON.stringify(used, null, 2)}\n`);
 
         // Format output.
         return JSON.stringify(data, null, 2)
