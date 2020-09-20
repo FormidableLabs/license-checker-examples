@@ -64,8 +64,6 @@ module.exports = APPS.map((app) => ({
     path: path.join(__dirname, "dist"),
     filename: "[name].js"
   },
-  // It's easier to find non-standard licenses in backend code, so use node target and libs.
-  target: app === "unapproved" ? "node" : undefined,
   devtool: false,
   plugins: [
     new LicenseCheckerWebpackPlugin({
