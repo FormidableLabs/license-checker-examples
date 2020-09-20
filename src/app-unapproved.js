@@ -2,4 +2,9 @@
  * App with unapproved licenses.
  */
 
-console.log("TODO");
+// Non-standard license "DBAD".
+import ipc from "node-ipc";
+
+console.log({
+  ipc
+});
