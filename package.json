@@ -5,13 +5,25 @@
   "main": "index.js",
   "author": "Ryan Roemer <ryan.roemer@formidable.com>",
   "license": "MIT",
-  "scripts":{
+  "scripts": {
     "clean": "rm -rf dist",
     "build": "webpack",
     "build-all": "APP_ALL=true yarn build",
     "build-unapproved": "APP_UNAPPROVED=true yarn build"
   },
+  "dependencies": {
+    "@apollo/client": "^3.2.0",
+    "fullpage.js": "^3.0.9",
+    "graphql": "^15.3.0",
+    "left-pad": "^1.3.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "redux": "^4.0.5",
+    "scrollmagic": "^2.0.7",
+    "urql": "^1.10.1"
+  },
   "devDependencies": {
+    "chalk": "^4.1.0",
     "license-checker-webpack-plugin": "^0.1.5",
     "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12"
