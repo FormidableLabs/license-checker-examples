@@ -30,7 +30,7 @@ const LICENSE_CHECKER_OPTS = {
 console.log(chalk`
 {cyan ## Configured Licenses:}
 ${ALLOWED_LICENSES.map((lic) =>
-  chalk`- ${lic}: {gray https://spdx.org/licenses/${lic}.html}`).join("\n")}
+  chalk`- \`${lic}\`: {gray https://spdx.org/licenses/${lic}.html}`).join("\n")}
 `);
 
 // ----------------------------------------------------------------------------
