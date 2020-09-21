@@ -9,11 +9,17 @@ const LicenseCheckerWebpackPlugin = require("license-checker-webpack-plugin");
 // ----------------------------------------------------------------------------
 // Create straight list of allowed licenses for ease of review.
 const ALLOWED_LICENSES = [
-  "Apache-2.0",
   "0BSD",
+  "Apache-2.0",
   "BSD-2-Clause",
   "BSD-3-Clause",
-  "MIT"
+  "ISC",
+  "MIT",
+  "Unlicense"
+];
+// Potential future license
+const ADDL_ALLOWED_LICENSES = [
+  "X11"
 ];
 // Convert to plugin options.
 // See: https://github.com/microsoft/license-checker-webpack-plugin#options
@@ -28,10 +34,16 @@ const LICENSE_CHECKER_OPTS = {
 
 // Create report of configuration.
 console.log(chalk`
-{cyan ## Configured Licenses:}
+{cyan ## Configured Licenses}
 ${ALLOWED_LICENSES.map((lic) =>
   chalk`- \`${lic}\`: {gray https://spdx.org/licenses/${lic}.html}`).join("\n")}
 `);
+console.log(chalk`
+{cyan ## Additional Licenses}
+${ADDL_ALLOWED_LICENSES.map((lic) =>
+  chalk`- \`${lic}\`: {gray https://spdx.org/licenses/${lic}.html}`).join("\n")}
+`);
+
 
 // ----------------------------------------------------------------------------
 // Example Configuration
