@@ -32,7 +32,9 @@ Here is our current license list from: https://spdx.org/licenses/
 - `Apache-2.0`: https://spdx.org/licenses/Apache-2.0.html
 - `BSD-2-Clause`: https://spdx.org/licenses/BSD-2-Clause.html
 - `BSD-3-Clause`: https://spdx.org/licenses/BSD-3-Clause.html
+- `ISC`: https://spdx.org/licenses/ISC.html
 - `MIT`: https://spdx.org/licenses/MIT.html
+- `Unlicense`: https://spdx.org/licenses/Unlicense.html
 
 ## Outputs
 

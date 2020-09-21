@@ -13,7 +13,13 @@ const ALLOWED_LICENSES = [
   "Apache-2.0",
   "BSD-2-Clause",
   "BSD-3-Clause",
-  "MIT"
+  "ISC",
+  "MIT",
+  "Unlicense"
+];
+// Potential future license
+const ADDL_ALLOWED_LICENSES = [
+  "X11"
 ];
 // Convert to plugin options.
 // See: https://github.com/microsoft/license-checker-webpack-plugin#options
@@ -32,6 +38,12 @@ console.log(chalk`
 ${ALLOWED_LICENSES.map((lic) =>
   chalk`- \`${lic}\`: {gray https://spdx.org/licenses/${lic}.html}`).join("\n")}
 `);
+console.log(chalk`
+{cyan ## Additional Licenses}
+${ADDL_ALLOWED_LICENSES.map((lic) =>
+  chalk`- \`${lic}\`: {gray https://spdx.org/licenses/${lic}.html}`).join("\n")}
+`);
+
 
 // ----------------------------------------------------------------------------
 // Example Configuration
