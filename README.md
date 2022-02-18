@@ -48,3 +48,8 @@ dist/
 ```
 
 where `app-[NAME]-notices.txt` contains license information for all included dependencies for that particular app in text form suitable for a notice document. `app-[NAME]-notices.json` is a JSON dump of all the license data for possible programmatic use elsewhere.
+
+
+## Maintenance Status
+
+**Archived:** This project is no longer maintained by Formidable. We are no longer responding to issues or pull requests unless they relate to security concerns. We encourage interested developers to fork this project and make it their own!
