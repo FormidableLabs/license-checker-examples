@@ -1,5 +1,4 @@
-License Checker Examples
-========================
+[![License Checker Examples — Formidable, We build the modern web](https://raw.githubusercontent.com/FormidableLabs/license-checker-examples/main/license-checker-Hero.png)](https://formidable.com/open-source/)
 
 [![Maintenance Status][maintenance-image]](#maintenance-status)
 
